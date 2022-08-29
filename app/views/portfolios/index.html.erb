@@ -3,5 +3,5 @@
   <h2><%= portfolio_item.title %></h2>
   <h5><%= portfolio_item.subtitle %></h5>
   <p><%= portfolio_item.body %></p>
-  <%= image_tag portfolio_item.thumb_image %>
+  <%= image_tag portfolio_item.thumb_image unless portfolio_item.thumb_image.nil? %>
 <% end %>
