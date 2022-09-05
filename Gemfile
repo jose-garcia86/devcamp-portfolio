@@ -64,3 +64,5 @@ group :development do
   # gem "spring"
 end
 
+# Friendly id
+gem 'friendly_id', '~> 5.4.0'
