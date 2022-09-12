@@ -1,4 +1,5 @@
 class Portfolio < ApplicationRecord
+  include Placeholder
   validates_presence_of :title, :body, :main_image, :thumb_image
 
   # Creates a custom scope by defining a new method
@@ -13,7 +14,7 @@ class Portfolio < ApplicationRecord
   after_initialize :set_defaults
 
   def set_defaults
-    self.main_image ||= "https://placehold.co/600x400/000000/FFF"
-    self.thumb_image ||= "https://placehold.co/350x200/000000/FFF"
+    self.main_image ||= Placeholder.image_generator(height: 600, width: 400)
+    self.thumb_image ||= Placeholder.image_generator(height: 350, width: 200)
   end
 end
