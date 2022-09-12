@@ -1,6 +1,7 @@
 class Portfolio < ApplicationRecord
   include Placeholder
   has_many :technologies
+  accepts_nested_attributes_for :technologies, reject_if: lambda { |attrs| attrs['name'].blank? }
   validates_presence_of :title, :body, :main_image, :thumb_image
 
   # Creates a custom scope by defining a new method
