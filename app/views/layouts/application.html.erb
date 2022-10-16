@@ -15,7 +15,7 @@
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
 
-  <%= render 'share/nav' %>
+  <%= render 'share/nav', location: 'top' %>
 
   <% if current_user.is_a?(User) %>
     <%= link_to "Sign out", destroy_user_session_path, data: { turbo_method: :delete } %>
