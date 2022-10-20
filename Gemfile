@@ -69,3 +69,9 @@ gem 'friendly_id', '~> 5.4.0'
 
 # Authentication with Devise
 gem 'devise', '~> 4.8', '>= 4.8.1'
+
+# Bootstrap 5
+gem 'bootstrap', '~> 5.2.2'
+
+# JQuery
+gem 'jquery-rails'
